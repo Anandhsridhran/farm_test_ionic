@@ -1,0 +1,43 @@
+<ion-side-menus>
+    <ion-pane ion-side-menu-content>
+        <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+            <!--<ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button>-->
+        </ion-nav-bar>
+            <ion-view title="{{title}}">
+                <ion-nav-buttons side="left">
+                    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+                </ion-nav-buttons>
+                <ion-content class="has-header" style="background-color:rgb(240,241,248);" >
+                    <label class="item item-input" style="background-color:rgb(240,241,248);border:none;margin-left:3%;">
+                        Any Pig treated ?
+                        
+                    </label>
+                    <div class="row">
+                        
+                        <div class="col col-50">
+                            <a  style="border-radius:5px;padding:10% 35%;margin-top:10%;background-color:white;color:black;width:100%;" href="#/inventory6/{{barn_id}}">Yes</a></div>
+                        <div class="col col-50">
+                            <a  style="border-radius:5px;padding:10% 35%;margin-top:10%;background-color:white;color:black;width:100%;" href="#/review/{{barn_id}}">No</a></div>             </div>
+                    
+ 
+                </ion-content>
+                
+            </ion-view>
+    </ion-pane>
+    
+    <ion-side-menu side="left">
+        <header class="bar bar-header bar-stable">
+            <h1 class="title">Menu</h1>
+        </header>
+        <ion-content class="has-header">
+            <ion-list>
+                <ion-item nav-clear menu-close href="#/dashboard">
+                    Dashboard
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/login">
+                    Logout
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

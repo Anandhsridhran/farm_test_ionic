@@ -1,0 +1,40 @@
+<ion-side-menus>
+    <ion-pane ion-side-menu-content>
+        <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+            <!--<ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button>-->
+        </ion-nav-bar>
+            <ion-view title="{{title}}">
+                <ion-nav-buttons side="left">
+                    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+                </ion-nav-buttons>
+                <ion-content class="has-header" style="background-color:rgb(240,241,248);" >
+                    <div style="float:left;width:100%;margin-top:5%">
+                    <span style="float:left;width:80%;padding-left:5%;padding-top:3%;">Pig Deaths</span>
+                    <input type="number" style="float:left;width:16%;margin-top-top:10%;padding-right:4%;" ng-model="pignodeath.text" ng-change="pigdeathsonchange()"></div>
+                    <div id="deathPigDiv" class="list" >
+                        </div>
+                    <a  style="padding-bottom:3%;border-radius:5px;text-align:center;background-color:white;color:black;width:42.5%;float:left;margin-top:5%;margin-left:5%;padding-top:3%;" href="#/inventory5/{{barn_id}}" >Next</a>
+                    <a  style="border-radius:5px;text-align:center;background-color:white;color:black;width:42.5%;float:left;margin-top:5%;margin-left:5%;padding-top:3%;padding-bottom:3%;" href="#/inventory/{{barn_id}}" >Cancel</a>
+                    
+
+                </ion-content>
+                
+            </ion-view>
+    </ion-pane>
+    
+    <ion-side-menu side="left">
+        <header class="bar bar-header bar-stable">
+            <h1 class="title">Menu</h1>
+        </header>
+        <ion-content class="has-header">
+            <ion-list>
+                <ion-item nav-clear menu-close href="#/dashboard">
+                    Dashboard
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/login">
+                    Logout
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

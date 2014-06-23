@@ -1,0 +1,60 @@
+<ion-side-menus>
+    <ion-pane ion-side-menu-content>
+        <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+            <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button>
+        </ion-nav-bar>
+        <ion-view title="{{title}}">
+            <ion-nav-buttons side="left">
+                <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+            </ion-nav-buttons>
+            <ion-content class="has-header" style="background-color:rgb(131,155,207)" id= "bodybarn">
+              
+              <div style="margin-top:5%;margin-left:5%;float:left;width:60%;font-size:18px;"><img ng-src='img/{{systemstatus}}1.png' style="margin-right:5px;float:left;">
+                   <span style="color:white">{{barname}}</span>
+               </div>
+               <div style="margin-top:5%;float:left;width:35%;">
+                   <span style="color:white;font-size:10px;">Last Reading at<br/>{{reported_at}}</span>
+               </div>
+               <div style="margin-top:5%;margin-left:10%;float:left;width:70%;">
+                   <span style="color:white;font-size:45px;font-weight:bold;margin-top:2%;">{{temp}}&deg; </span>
+                   <span style="color:white;font-size:25px;font-weight:bold;">F</span>
+               </div>
+               <div style="margin-top:5%;float:right;width:20%;">
+                   <span style="color:white;font-size:20px;">HUM <br/>{{hum}} % </span>
+               </div>
+               <div style="border-bottom:1px solid white;width:90%;float:left;border-top:1px solid white;margin-left:5%;padding-top:5%;margin-top:5%;padding-bottom:5%">
+                  <span style="font-size:18px;float:left;color:white;">Feed :</span><img ng-src='img/{{feed}}1.png' style="float:left;margin-left:2%;"><br/><br/>
+                  <span style="font-size:18px;float:left;color:white;">AC Power : </span><img ng-src='img/{{ac}}1.png' style="float:left;margin-left:2%;"><br/><br/>
+                  <span style="font-size:18px;float:left;color:white;width:80%;">Current Inventory : {{total_inventory}}</span>
+                  <span style="font-size:10px;float:left;color:white;width:20%;"> {{report_date}}</span>
+                  <span style="font-size:18px;float:left;color:white;padding-left:15%;width:85%;padding-top:5%;">Dead Pigs : {{pig_death}}</span><br/>
+                  <span style="font-size:18px;float:left;color:white;padding-left:15%;padding-top:5%;">Sick Pigs : {{pig_sicks}}</span><br/>
+                  
+                </div>
+               <div style="padding-left:5%;padding-top:top:5%" >
+                   <span style="font-size:18px;float:left;color:white;padding-top:5%;width:100%;">Events</span>
+                   <div style="float:left:width:100%;">
+                       <span style="float:left;color:white;width:70%;padding-top:5%;">{{eventdescription}}</span>
+                       <span style="float:left;color:white;width:30%;padding-top:5%;">{{eventreported_at}}</span>
+                    </div>
+                </div>
+               <a href="#/inventory/{{barnid}}" class="button button-block button-stable" style="margin:10% 2% 2% 2%;border-radius:10px;">Daily Inventory</a>
+            </ion-content>
+        </ion-view>
+    </ion-pane>
+    <ion-side-menu side="left">
+        <header class="bar bar-header bar-stable">
+            <h1 class="title">Menu</h1>
+        </header>
+        <ion-content class="has-header">
+            <ion-list>
+                <ion-item nav-clear menu-close href="#/dashboard">
+                    Dashboard
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/login">
+                    Logout
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

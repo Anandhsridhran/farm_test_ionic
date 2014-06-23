@@ -1,0 +1,71 @@
+<ion-side-menus>
+    <ion-pane ion-side-menu-content>
+        <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+            <!--<ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button>-->
+        </ion-nav-bar>
+            <ion-view title="{{title}}">
+                <ion-nav-buttons side="left">
+                    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+                </ion-nav-buttons>
+                <ion-content class="has-header" style="background-color:rgb(240,241,248);" >
+                    <div style="float:left;width:100%;padding:1%;border:1px dashed black;margin-top:3%;">
+                        <div class="row">
+                            <div class="col col-50"><span style="color:blue;">Last Inventory : </span></div>
+                            <div class="col col-50">{{reported_at}}</div></div>
+                        <div class="row">
+                            <div class="col col-20">Inv</div>
+                            <div class="col col-30">Pig Deaths</div>
+                            <div class="col col-30">Sick Pigs</div>
+                            <div class="col col-20">Intials</div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col col-20">{{total_inventory}}</div>
+                            <div class="col col-30">{{pig_death}}</div>
+                            <div class="col col-30">{{pig_sick}}</div>
+                            <div class="col col-20">{{Intials}}</div>
+                            
+                        </div>
+                    </div>
+                    <label class="item item-input" style="background-color:rgb(240,241,248);border:none;margin-left:3%;">
+                        
+                        Date
+                        
+                        <input type="date" ng-model="date" value="{{date}}">
+                            </label>
+                    <span style="float:left;width:80%;padding-left:5%;padding-top:3%;">Number of Pigs in Shipment</span>
+                    <input type="text" style="float:left;width:16%;margin-top-top:10%;padding-right:4%;" ng-model="pignoshipment.text">
+                          <input type="text" style="float:left;width:90%;margin-left:5%;margin-right:5%;margin-top:5%;" placeholder="Name of supplier" ng-model="supplier.text">
+                          <a  style="padding-bottom:3%;border-radius:5px;text-align:center;background-color:white;color:black;width:42.5%;float:left;margin-top:5%;margin-left:5%;padding-top:3%;" ng-click="submitShipment()" >Submit</a>
+                           <a  style="border-radius:5px;text-align:center;background-color:white;color:black;width:42.5%;float:left;margin-top:5%;margin-left:5%;padding-top:3%;padding-bottom:3%;" href="#/inventory/{{barn_id}}" >Cancel</a>
+                        
+                      
+                            <div class="row" style="margin-top:10%;">
+                                
+                                <div class="col col-50">
+                                  </div>
+                                <div class="col col-50">
+                                   </div>
+                            </div>
+
+                </ion-content>
+                
+            </ion-view>
+    </ion-pane>
+    
+    <ion-side-menu side="left">
+        <header class="bar bar-header bar-stable">
+            <h1 class="title">Menu</h1>
+        </header>
+        <ion-content class="has-header">
+            <ion-list>
+                <ion-item nav-clear menu-close href="#/dashboard">
+                    Dashboard
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/login">
+                    Logout
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>
